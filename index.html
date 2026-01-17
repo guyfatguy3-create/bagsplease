@@ -208,26 +208,6 @@
 
         @keyframes cloudFloat { 0% { transform: translateX(0); } 100% { transform: translateX(calc(100vw + 200px)); } }
 
-        /* Cartoon Characters */
-        .character {
-            position: absolute;
-            font-size: 80px;
-            filter: drop-shadow(3px 5px 5px rgba(0,0,0,0.3));
-            z-index: 20;
-        }
-
-        .character.frog { top: 5%; left: 8%; animation: charFloat 4s ease-in-out infinite; }
-        .character.cat { top: 8%; right: 25%; animation: charFloat 4s ease-in-out infinite 0.5s; }
-        .character.dog { top: 3%; right: 8%; animation: charFloat 4s ease-in-out infinite 1s; }
-        .character.monkey { bottom: 25%; left: 5%; animation: charWave 1s ease-in-out infinite; font-size: 100px; }
-        .character.bear { bottom: 20%; right: 5%; animation: charWave 1s ease-in-out infinite 0.5s; font-size: 100px; transform: scaleX(-1); }
-        .character.penguin { bottom: 30%; left: 15%; animation: charBounce 1.5s ease-in-out infinite; font-size: 70px; }
-        .character.rabbit { bottom: 28%; right: 15%; animation: charBounce 1.5s ease-in-out infinite 0.3s; font-size: 70px; }
-
-        @keyframes charFloat { 0%, 100% { transform: translateY(0) rotate(-5deg); } 50% { transform: translateY(-20px) rotate(5deg); } }
-        @keyframes charWave { 0%, 100% { transform: rotate(-5deg); } 50% { transform: rotate(5deg); } }
-        @keyframes charBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
-
         /* Beach */
         .beach {
             position: absolute;
@@ -238,28 +218,6 @@
             background: linear-gradient(180deg, transparent 0%, #f4e4bc 30%, #e8d4a8 100%);
             z-index: 5;
         }
-
-        /* Palm Trees */
-        .palm-tree {
-            position: absolute;
-            font-size: 120px;
-            z-index: 15;
-            filter: drop-shadow(5px 10px 10px rgba(0,0,0,0.3));
-        }
-
-        .palm-tree.left { left: 3%; bottom: 5%; animation: palmSway 4s ease-in-out infinite; }
-        .palm-tree.right { right: 3%; bottom: 8%; animation: palmSway 4s ease-in-out infinite 0.5s; transform: scaleX(-1); }
-
-        @keyframes palmSway { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
-
-        /* Flowers */
-        .flower { position: absolute; font-size: 40px; z-index: 6; animation: flowerSway 3s ease-in-out infinite; }
-        .flower.f1 { bottom: 8%; left: 20%; }
-        .flower.f2 { bottom: 5%; left: 35%; animation-delay: 0.5s; }
-        .flower.f3 { bottom: 10%; right: 25%; animation-delay: 1s; }
-        .flower.f4 { bottom: 6%; right: 35%; animation-delay: 1.5s; }
-
-        @keyframes flowerSway { 0%, 100% { transform: rotate(-5deg); } 50% { transform: rotate(5deg); } }
 
         /* Logo */
         .logo-container { position: relative; margin-bottom: 20px; z-index: 50; }
@@ -483,10 +441,6 @@
 
         @keyframes shine { 0% { transform: translateX(-100%) rotate(45deg); } 100% { transform: translateX(100%) rotate(45deg); } }
 
-        .blueprint-icon { font-size: 4rem; margin-bottom: 20px; animation: iconPulse 2s ease-in-out infinite; }
-
-        @keyframes iconPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
-
         .blueprint-title { font-family: 'Bangers', cursive; font-size: 2.5rem; color: var(--neon-green); margin-bottom: 25px; text-shadow: 0 0 15px var(--neon-green); }
 
         .blueprint-text { font-family: 'Poppins', sans-serif; font-size: 1.1rem; color: var(--white); line-height: 2; position: relative; z-index: 1; }
@@ -533,7 +487,6 @@
             border-color: var(--neon-green);
         }
 
-        .feature-icon { font-size: 4rem; margin-bottom: 20px; display: block; }
         .feature-title { font-family: 'Fredoka One', cursive; font-size: 1.5rem; color: var(--neon-green); margin-bottom: 15px; }
         .feature-desc { font-family: 'Poppins', sans-serif; font-size: 1rem; color: rgba(255,255,255,0.8); line-height: 1.6; }
 
@@ -598,9 +551,6 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .character { font-size: 50px; }
-            .character.monkey, .character.bear { font-size: 70px; }
-            .palm-tree { font-size: 80px; }
             .main-logo { width: 140px; height: 140px; }
             .blueprint { padding: 30px 25px; margin: 0 15px; }
             .social-bubbles { flex-direction: column; align-items: center; }
@@ -628,14 +578,6 @@
             <div class="cloud c2"></div>
             <div class="cloud c3"></div>
 
-            <div class="character frog">🐸</div>
-            <div class="character cat">🐱</div>
-            <div class="character dog">🐶</div>
-            <div class="character monkey">🙋</div>
-            <div class="character bear">🙋</div>
-            <div class="character penguin">🐧</div>
-            <div class="character rabbit">🐰</div>
-
             <div class="logo-container">
                 <div class="glow-ring"></div>
                 <div class="glow-ring"></div>
@@ -650,7 +592,7 @@
                 <span>$</span><span>B</span><span>A</span><span>G</span><span>S</span>
             </h1>
 
-            <p class="subtitle">WORK FOR YOUR BAGS 💼</p>
+            <p class="subtitle">WORK FOR YOUR BAGS</p>
 
             <div class="social-bubbles">
                 <a href="https://x.com/bagsonpf" target="_blank" class="bubble-link">
@@ -673,16 +615,10 @@
 
             <div class="scroll-indicator">
                 <span>Scroll Down</span>
-                <div class="arrow">⌄</div>
+                <div class="arrow">↓</div>
             </div>
 
             <div class="beach"></div>
-            <div class="palm-tree left">🌴</div>
-            <div class="palm-tree right">🌴</div>
-            <div class="flower f1">🌺</div>
-            <div class="flower f2">🌸</div>
-            <div class="flower f3">🌺</div>
-            <div class="flower f4">🌸</div>
         </section>
 
         <section class="section-blueprint">
@@ -693,38 +629,33 @@
             <div class="water-bubble" style="width: 12px; height: 12px; left: 85%; animation-delay: 3s;"></div>
 
             <div class="blueprint">
-                <div class="blueprint-icon">🔐</div>
                 <h2 class="blueprint-title">THE SECRET BLUEPRINT</h2>
                 <p class="blueprint-text">
                     <span class="highlight">You must WORK for your bags.</span> Alon has mentioned this multiple times - it's the <span class="emphasis">secret blueprint</span>, the underrated way to secure a sender now that OG markets are coming back.
                     <br><br>
                     Instead of running tech bags coins, all we have to do is <span class="highlight">follow Alon's blueprint</span> and we can reach <span class="emphasis">multi-millions</span> that way.
                     <br><br>
-                    <span class="highlight">STICK TO THE ROOTS. 🌴</span>
+                    <span class="highlight">STICK TO THE ROOTS.</span>
                 </p>
             </div>
         </section>
 
         <section class="section-features">
-            <h2 class="features-title">WHY $BAGS? 💰</h2>
+            <h2 class="features-title">WHY $BAGS?</h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <span class="feature-icon">🎯</span>
                     <h3 class="feature-title">OG Strategy</h3>
                     <p class="feature-desc">Back to the roots. The proven blueprint that built fortunes before tech rugs ruined everything.</p>
                 </div>
                 <div class="feature-card">
-                    <span class="feature-icon">💪</span>
                     <h3 class="feature-title">Work = Rewards</h3>
                     <p class="feature-desc">No free rides. Those who put in the work get the bags. Simple as that.</p>
                 </div>
                 <div class="feature-card">
-                    <span class="feature-icon">🌴</span>
                     <h3 class="feature-title">Community First</h3>
                     <p class="feature-desc">A tight-knit community of grinders who understand the assignment.</p>
                 </div>
                 <div class="feature-card">
-                    <span class="feature-icon">🚀</span>
                     <h3 class="feature-title">Multi-Million Vision</h3>
                     <p class="feature-desc">Following Alon's blueprint to reach heights others only dream about.</p>
                 </div>
@@ -732,7 +663,7 @@
         </section>
 
         <section class="section-community">
-            <h2 class="community-title">JOIN THE MOVEMENT 🌊</h2>
+            <h2 class="community-title">JOIN THE MOVEMENT</h2>
             <p class="community-subtitle">Stop watching from the sidelines. It's time to work for your bags and secure your future.</p>
             <div class="cta-buttons">
                 <a href="https://x.com/bagsonpf" target="_blank" class="cta-btn primary">
@@ -740,7 +671,6 @@
                     <span>Join on X</span>
                 </a>
                 <a href="#" class="cta-btn secondary">
-                    <span>📊</span>
                     <span>View Chart</span>
                 </a>
             </div>
@@ -749,7 +679,7 @@
         <footer class="footer">
             <img src="logo.png" alt="$BAGS Logo" class="footer-logo">
             <p class="footer-text">© 2025 <span class="highlight">$BAGS</span> - Work For Your Bags</p>
-            <p class="footer-text">Not financial advice. DYOR. 🌴</p>
+            <p class="footer-text">Not financial advice. DYOR.</p>
         </footer>
 
         <div id="particles"></div>
